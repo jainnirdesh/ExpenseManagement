@@ -1,0 +1,442 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    background: #f4f7fa;
+    font-family: 'Inter', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    width: 1324px;
+    height: 781px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    padding: 32px 24px 24px 24px;
+    overflow-y: auto; /* Scroll if content overflows vertically */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.auth-card {
+    background: #fff;
+    max-width: 370px;
+    margin: 70px auto 0 auto;
+    padding: 36px 32px 28px 32px;
+    border-radius: 16px;
+    box-shadow: 0 6px 32px rgba(44,62,80,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.auth-card h2 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+input, select {
+    padding: 10px 12px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #f9f9f9;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #27ae60;
+    background: #fff;
+}
+
+.auth-input:focus {
+    border: 1.5px solid #27ae60;
+    outline: none;
+    background: #fff;
+}
+
+button[type="submit"] {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+}
+
+.auth-btn {
+    width: 100%;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #219150;
+}
+
+.auth-btn:hover {
+    background: #219150;
+}
+
+#error-message {
+    color: #e74c3c;
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.balance {
+    text-align: center;
+    margin: 18px 0 10px 0;
+}
+
+.balance h2 {
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.transactions {
+    margin-bottom: 18px;
+}
+
+.transactions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.transactions li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+}
+
+.transactions li.income {
+    border-left: 4px solid #27ae60;
+}
+
+.transactions li.expense {
+    border-left: 4px solid #e74c3c;
+}
+
+.transactions span {
+    margin-right: 10px;
+    min-width: 70px;
+    display: inline-block;
+}
+
+.delete-btn, .edit-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    margin-left: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.edit-btn {
+    background: #2980b9;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.edit-btn:hover {
+    background: #f39c12;
+}
+
+.summary {
+    background: #f8fafd;
+    border-radius: 8px;
+    padding: 14px 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+}
+
+.summary h3 {
+    margin: 6px 0;
+    font-weight: 500;
+    color: #222;
+}
+
+#filter-category {
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    background: #f9f9f9;
+    font-size: 1rem;
+}
+
+canvas#expenseChart {
+    display: block;
+    margin: 24px auto 0 auto;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+    padding: 8px;
+}
+
+#auth-section, #register-section {
+    max-width: 350px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    padding: 28px 20px 20px 20px;
+    text-align: center;
+}
+
+#auth-section input, #register-section input {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.export-btn, .import-btn {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 5px;
+    margin: 6px 4px 12px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.export-btn:hover, .import-btn:hover {
+    background: #1c5a8a;
+}
+
+.date-filter {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.filter-btn {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.filter-btn:hover {
+    background: #219150;
+}
+
+.filters-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.filters-row select,
+.filters-row input[type="date"] {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    background: #f9f9f9;
+    font-size: 1rem;
+}
+
+.filters-row .filter-btn {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.filters-row .filter-btn:hover {
+    background: #219150;
+}
+
+/* Profile menu styles */
+.profile-menu {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    z-index: 100;
+}
+
+.profile-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #27ae60;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    transition: box-shadow 0.2s;
+}
+
+.profile-icon:hover {
+    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 54px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    min-width: 180px;
+    padding: 14px 0 10px 0;
+    text-align: right;
+}
+
+.profile-dropdown .profile-info {
+    padding: 0 18px 8px 18px;
+    font-weight: 600;
+    color: #222;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    color: #2980b9;
+    font-size: 1rem;
+    padding: 8px 18px;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.profile-btn.logout {
+    color: #e74c3c;
+}
+
+.profile-btn:hover {
+    background: #f4f7fa;
+}
+
+.profile-modal-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44,62,80,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.profile-modal-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+    padding: 32px 32px 24px 32px;
+    min-width: 320px;
+    max-width: 95vw;
+    text-align: center;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 1.7rem;
+    color: #888;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.close-modal:hover {
+    color: #e74c3c;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 14px 4vw 18px 4vw;
+        min-height: unset;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .transactions li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .summary {
+        padding: 10px 6px;
+    }
+    .filters-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+}
